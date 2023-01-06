@@ -20,4 +20,4 @@ Use this as a starting point to complete the WDD 330 team activity: the SleepOut
 - `npm run format` to run Prettier to automatically format your code.
 
 
-URL: https://app.netlify.com/sites/effervescent-boba-d50c4b/overview
+URL: https://effervescent-boba-d50c4b.netlify.app

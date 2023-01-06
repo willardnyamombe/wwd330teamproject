@@ -3,6 +3,9 @@
 But for now we have in the Team: 
 Willard
 Felipe
+
+Wyatt
+
 Wyatt
 
 
@@ -12,3 +15,4 @@ git command for swithing from main branch
 
 git branch (check where you are)
 git checkout "name of branch"
+

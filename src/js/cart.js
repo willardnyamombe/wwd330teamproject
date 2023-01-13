@@ -1,5 +1,3 @@
-import { getLocalStorage } from "./utils.mjs";
-
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
@@ -21,8 +19,6 @@ function cartItemTemplate(item) {
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
 </li>`;
-
   return newItem;
 }
-
 renderCartContents();

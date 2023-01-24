@@ -53,7 +53,7 @@ export default class ProductDetails {
         <h2 class="divider">${this.product.NameWithoutBrand}</h2>
         <img
           class="divider"
-          src="${this.product.Image}"
+          src="${this.product.Images.PrimaryLarge}"
           alt="${this.product.Name}"
         />
 

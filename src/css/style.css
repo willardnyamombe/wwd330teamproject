@@ -96,11 +96,55 @@ button {
 }
 /* End utility classes */
 
-/* Cart icon styles */
+/*Cart icon styles */
 .cart {
   padding-top: 1em;
   position: relative;
   text-align: center;
+}
+
+/*.cart-animate {
+    padding-top: 1em;
+    position: relative;
+    text-align: center;
+    animation: blink 3s 1;
+  }
+  
+  @keyframes blink {
+    0% {transform: scale(1);}
+      42% {transform: scale(1);}
+      45% {transform: scale(2);}
+      50% {transform: scale(1);}
+      55% {transform: scale(2);}
+      58% {transform: scale(1);}
+      100% {transform: scale(1);}
+  }*/
+.cart-animate {
+  /* animation properties */
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 .cart svg {
@@ -108,6 +152,23 @@ button {
 }
 .cart:hover svg {
   fill: gray;
+}
+
+#cart-items-number {
+  position: absolute;
+  top: 0.35rem;
+  right: -0.2rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 0.12em 0.4rem 0.12em;
+  font-size: var(--small-font);
+  font-weight: 700;
+  display: none;
+}
+
+.cart a:active #cart-items-number {
+  color: black;
+  background-color: var(--primary-color);
 }
 
 /* End cart icon styles */

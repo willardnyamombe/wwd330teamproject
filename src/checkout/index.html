@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Sleep Outside | Checkout</title>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/checkout.js" type="module"></script>
   </head>
-
   <body>
-    <header class="divider" id="header"></header>
-
-    <main class="divider">
-      <section class="products">
-        <h2>Review & Place your Order</h2>
+    <header class="divider" id="main-header"></header>
+    <main class="divider checkout">
+      <h2>Review & Place your Order</h2>
+      <section class="checkout-form">
         <form name="checkout">
           <fieldset>
             <legend>Shipping</legend>
-            <div class="checkout-name">
+            <div class="checkout__name">
               <label for="fname">First Name</label>
               <input name="fname" required />
               <label for="lname">Last Name</label>
               <input name="lname" required />
             </div>
-            <div class="checkout-address">
+            <div class="checkout__address">
               <label for="street">Street</label>
               <input name="street" required />
               <label for="city">City</label>
@@ -75,7 +69,6 @@
         </form>
       </section>
     </main>
-
-    <footer id="footer"></footer>
+    <footer id="main-footer"></footer>
   </body>
 </html>

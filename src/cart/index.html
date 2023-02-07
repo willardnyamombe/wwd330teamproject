@@ -9,7 +9,7 @@
     <title>Sleep Outside | Cart</title>
 
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="../js/main.js" type="module"></script>
+    <!-- <script src="../js/main.js" type="module"></script> -->
     <script src="../js/cart.js" type="module"></script>
   </head>
 
@@ -21,12 +21,14 @@
         <h2>My Cart</h2>
 
         <ul class="product-list"></ul>
+        <div class="list-footer hide">
+          <p class="list-total">Total:</p>
+          <a href="/checkout/index.html">Checkout</a>
+
+          <!-- <button id="check-out">Check Out</button> -->
+        </div>
       </section>
-      <div class="hide-total">
-        <p class="cart-total">Total:</p>
-        <!-- <button id="check-out">Check Out</button> -->
-      </div>
-      <a href="../checkout/index.html" id="check-out">Check Out</a>
+      
     </main>
 
     <footer id="footer"></footer>

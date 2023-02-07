@@ -26,35 +26,51 @@ export default class ShoppingCart {
       this.parentSelector = parentSelector;
     }
 
+    async init() {
+      const list = getLocalStorage(this.key);
+      this.calculateListTotal(list);
+      this.renderCartContents(list);
+    }
+    calculateListTotal(list) {
+      const amounts = list.map((item) => item.FinalPrice);
+      this.total = amounts.reduce((sum, item) => sum + item);
+    }
     renderCartContents() {
       const cartItems = getLocalStorage(this.key);
       const htmlItems = cartItems.map((item) => cartItemTemplate(item));
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
-      this.cartTotal();
+      document.querySelector(".list-total").innerText += ` $${this.total}`;
     }
- //The cartTotal function calculates the sum of the cost of items in the cart
- cartTotal() {
-  //save the items array in local storage to the variable 'cart'
-  let cartItems = getLocalStorage("so-cart");
 
-  //if there is an item in the cart, calculate and show the total
-  //else hide the div
-  if (cartItems) {
-    let sum = 0;
-    //loop through items in so-cart
-    //pull list price from array and add to sum
-    cartItems.forEach((item) => {
-      sum += item.ListPrice;
-    });
-    //insert sum into html
-    document.getElementsByClassName("hide-total")[0].innerHTML =
-      "Total: $" + sum.toFixed(2);
-    //document.querySelector(".cart-total").innerHTML = "Total: $" + sum;
-    //unhide element
-    document.querySelector(".hide-total").style.display = "block";
-  } else {
-    //hide element
-    document.querySelector(".hide-total").style.display = "none";
-  }
-}
+//     renderCartContents() {
+//       const cartItems = getLocalStorage(this.key);
+//       const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+//       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
+//       this.cartTotal();
+//     }
+//  //The cartTotal function calculates the sum of the cost of items in the cart
+//  cartTotal() {
+//   //save the items array in local storage to the variable 'cart'
+//   let cartItems = getLocalStorage("so-cart");
+
+//   //if there is an item in the cart, calculate and show the total
+//   //else hide the div
+//   if (cartItems) {
+//     let sum = 0;
+//     //loop through items in so-cart
+//     //pull list price from array and add to sum
+//     cartItems.forEach((item) => {
+//       sum += item.ListPrice;
+//     });
+//     //insert sum into html
+//     document.getElementsByClassName("hide-total")[0].innerHTML =
+//       "Total: $" + sum.toFixed(2);
+//     //document.querySelector(".cart-total").innerHTML = "Total: $" + sum;
+//     //unhide element
+//     document.querySelector(".hide-total").style.display = "block";
+//   } else {
+//     //hide element
+//     document.querySelector(".hide-total").style.display = "none";
+//   }
+// }
 }

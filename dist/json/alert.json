@@ -1,0 +1,22 @@
+{
+  "alerts": [
+    {
+      "message": "New product launch! Check out our latest collection.",
+      "bgColor": "#f9a825",
+      "textColor": "#ffffff",
+      "position": "top"
+    },
+    {
+      "message": "Limited time offer: Get 20% off on all products!",
+      "bgColor": "#4caf50",
+      "textColor": "#ffffff",
+      "position": "bottom"
+    },
+    {
+      "message": "Don't miss out on our end of season sale!",
+      "bgColor": "#ff5722",
+      "textColor": "#ffffff",
+      "position": "top"
+    }
+  ]
+}

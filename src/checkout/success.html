@@ -1,19 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Checkout</title>
-    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Sleep Outside | Cart</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="../js/main.js" type="module"></script>
   </head>
+
   <body>
-    <header class="divider" id="main-header"></header>
+    <header class="divider" id="header"></header>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs_item">
+        <a href="../index.html" class="breadcrumbs_link">Home</a>
+      </li>
+    </ul>
     <main class="divider">
-      <h2>Success! Thank you for your order!</h2>
-      <p>We will get this out to you just as fast as we can!</p>
-      <p>Many happy dreams sleeping outside!</p>
+      <h1>Order Complete</h1>
+      <p>Your order is complete.</p>
+      <p id="confirmation-No">Your confirmation number is:</p>
     </main>
-    <footer id="main-footer"></footer>
+
+    <footer id="footer"></footer>
+    <script src="../js/success.js" type="module"></script>
   </body>
 </html>

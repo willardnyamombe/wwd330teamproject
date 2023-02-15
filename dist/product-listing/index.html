@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Sleep Outside | Cart</title>
-
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="../js/main.js" type="module"></script>
-    <script src="../js/cart.js" type="module"></script>
+    <title>Sleep Outside | Product-Listing</title>
+    
+    
+    
+    <script type="module" crossorigin src="/assets/product_listing.c70474e9.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main.6b8d29ec.js">
+    <link rel="stylesheet" href="/assets/main.fcc1d133.css">
   </head>
 
   <body>
@@ -20,23 +19,20 @@
         <a href="../index.html" class="breadcrumbs_link">Home</a>
       </li>
       <li class="breadcrumbs_item">
-        <a href="../cart/index.html" class="breadcrumbs_link">Cart</a>
+        <a
+          href="../product-listing/index.html"
+          class="breadcrumbs_link"
+          id="quantity"
+          >Product Category</a
+        >
       </li>
     </ul>
     <main class="divider">
       <section class="products">
-        <h2>My Cart</h2>
-
+        <h2>Top Products: <span class="title"></span></h2>
         <ul class="product-list"></ul>
       </section>
-      <div class="hide-total">
-        <p class="cart-total">Total:</p>
-        <a href="../checkout/index.html"
-          ><button id="check-out">Check Out</button></a
-        >
-      </div>
     </main>
-
     <footer id="footer"></footer>
   </body>
 </html>

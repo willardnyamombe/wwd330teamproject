@@ -1,0 +1,10 @@
+{
+  "alerts": [
+    {
+      "message": "Please use the delete button to delete an item.",
+      "bgColor": "red",
+      "textColor": "white",
+      "position": "top"
+    }
+  ]
+}
